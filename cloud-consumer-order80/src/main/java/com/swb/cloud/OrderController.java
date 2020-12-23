@@ -19,7 +19,9 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class OrderController {
 
-    public static final String BASE_URL="http://localhost:8001";
+    //public static final String BASE_URL="http://localhost:8001";
+
+    public static final String BASE_URL="http://CLOUD-PROVIDER-PAYMENT";
     public static final String PAYMENT_CREATE= "/payment/create";
     public static final String PAYMENT_GETBYID= "/payment/get/";
 
@@ -32,9 +34,15 @@ public class OrderController {
         return  restTemplate.postForObject(BASE_URL+PAYMENT_CREATE,payment,CommonResult.class);
     }
 
+    @GetMapping("test")
+    public String test(){
+        return  "test";
+    }
+
 
     @GetMapping("consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
+        System.out.println("id---->" + id);
         return  restTemplate.getForObject(BASE_URL+PAYMENT_GETBYID + id,CommonResult.class);
     }
 }
