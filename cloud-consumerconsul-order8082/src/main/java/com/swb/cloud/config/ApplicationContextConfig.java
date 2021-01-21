@@ -8,15 +8,14 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author 72774
  * @Description
- * @create 2020-12-18 11:42
+ * @create 2021-01-19 11:51
  */
 @Configuration
 public class ApplicationContextConfig {
 
-
     @Bean
-    //@LoadBalanced  //开启轮询获取服务    //2021年1月21日 自己的轮询获取 注释此注解
-    public RestTemplate  getRestTemplate(){
+    @LoadBalanced
+    public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
 }

@@ -1,4 +1,4 @@
-package com.swb.cloud;
+package com.swb.cloud.controller;
 
 import com.swb.cloud.entities.CommonResult;
 import com.swb.cloud.entities.Payment;
@@ -21,7 +21,7 @@ public class OrderController {
 
     //public static final String BASE_URL="http://localhost:8001";
 
-    public static final String BASE_URL="http://CLOUD-PROVIDER-PAYMENT";
+    public static final String BASE_URL="http://CLOUD-PAYMENT-SERVICE";
     public static final String PAYMENT_CREATE= "/payment/create";
     public static final String PAYMENT_GETBYID= "/payment/get/";
 

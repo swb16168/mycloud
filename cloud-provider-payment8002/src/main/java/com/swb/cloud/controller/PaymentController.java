@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 /**
  * @author 72774
  * @Description
@@ -41,5 +43,13 @@ public class PaymentController {
         return CommonResult.failed();
 
     }
+
+
+
+    @GetMapping("mylb")
+    public String getLbPort(){
+        return serverPort+"---" + UUID.randomUUID();
+    }
+
 
 }
