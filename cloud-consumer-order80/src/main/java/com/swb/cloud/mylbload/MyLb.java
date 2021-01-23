@@ -18,7 +18,6 @@ public class MyLb implements LoadBalancer {
     private int getAndIncrement() {
         int current;
         int next;
-
         do {
             current = this.atomicInteger.get();
             next = current >= Integer.MAX_VALUE ? 0 : current + 1;

@@ -78,5 +78,20 @@ public class PaymentController {
     }
 
 
+    /**
+     * 测试feign调用超时
+     * @return
+     */
+    @GetMapping("feign/timeout")
+    public String getTimeout(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return serverPort + UUID.randomUUID();
+    }
+
 
 }

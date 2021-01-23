@@ -17,6 +17,9 @@
     <module>cloud-consumerZK-order8081</module>
       <module>cloud-providerconsul-payment8006</module>
       <module>cloud-consumerconsul-order8082</module>
+      <module>cloud-consumer-feign-order8080</module>
+      <module>cloud-provider-hystrix-payment8008</module>
+      <module>cloud-consumer-feign-hystrix-order8083</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>
