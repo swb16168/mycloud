@@ -1,0 +1,21 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://gitee.com/swb168/springcloud.git #填写你自己的github路径
+          search-paths:
+            - springcloud-config
+          username: swbaiwmf@163.com
+          password: shenwenbo..
+      label: master
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:7001/eureka   #单机版
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka    #集群版
+
