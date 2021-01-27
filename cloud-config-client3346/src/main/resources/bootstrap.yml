@@ -1,25 +1,22 @@
 server:
-  port: 3344
+  port: 3346
+
 spring:
   application:
-    name: cloud-config-center
+    name: config-client
   cloud:
     config:
-      server:
-        git:
-          uri:  https://gitee.com/swb168/springcloud.git #填写你自己的github路径
-          search-paths:
-            - springcloud-config
-          username: swbaiwmf@163.com
-          password: shenwenbo..
       label: master
+      name: configserver
+      #name: springcloud-config
+      profile: test
+      uri: http://localhost:3344
 #添加rabbitmq地址
   rabbitmq:
     host: localhost
     username: guest
     password: guest
     port: 5672
-
 eureka:
   client:
     service-url:
@@ -30,5 +27,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: 'bus-refresh'
-
+        include: "*"
