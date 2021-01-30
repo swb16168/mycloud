@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: cloud-consumer-order
+  zipkin:
+      base-url: http://localhost:9411   #标识追踪到的数据发送指定的位置
+  sleuth:
+    sampler:
+    probability: 1      #采样率  0 ~ 1  1标识全部采集
+
 
 
 eureka:

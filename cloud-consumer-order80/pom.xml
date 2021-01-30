@@ -11,6 +11,12 @@
 
     <artifactId>cloud-consumer-order80</artifactId>
     <dependencies>
+
+        <!--添加链路支持jar包  包含了sleuth+zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

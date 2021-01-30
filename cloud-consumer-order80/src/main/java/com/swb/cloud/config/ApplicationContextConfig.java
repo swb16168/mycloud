@@ -15,7 +15,7 @@ public class ApplicationContextConfig {
 
 
     @Bean
-    //@LoadBalanced  //开启轮询获取服务    //2021年1月21日 自己的轮询获取 注释此注解
+    @LoadBalanced  //开启轮询获取服务    //2021年1月21日 自己的轮询获取 注释此注解
     public RestTemplate  getRestTemplate(){
         return new RestTemplate();
     }

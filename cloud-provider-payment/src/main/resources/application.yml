@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: CLOUD-PAYMENT-SERVICE
+
+  zipkin:
+      base-url: http://localhost:9411   #标识追踪到的数据发送指定的位置
+  sleuth:
+    sampler:
+    probability: 1      #采样率  0 ~ 1  1标识全部采集
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
