@@ -25,6 +25,9 @@
       <module>cloud-config-server3344</module>
       <module>cloud-config-client3345</module>
       <module>cloud-config-client3346</module>
+      <module>cloud-stream-provider8801</module>
+      <module>cloud-stream-consumer8088</module>
+      <module>cloud-stream-consumer8803</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>
